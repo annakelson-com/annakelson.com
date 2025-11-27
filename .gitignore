@@ -208,4 +208,4 @@ __marimo__/
 /annakelsoncom/settings/dev.py
 
 # Wagtail Media
-./media/*
+/media/*

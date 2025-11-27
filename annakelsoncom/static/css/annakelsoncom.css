@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Garamontio Sans Regular';
+  src: url('/static/fonts/GaramontioSans-Regular.woff2') format('woff2');
+  font-weight: 200 900;
+}
+
+@font-face {
+  font-family: 'Raleway Variable';
+  src: url('/static/fonts/Raleway-VF.woff2') format('woff2-variations');
+  font-weight: 200 900;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --max-page-width: 85rem;
+    --standard-gap: 1rem;
+    --large-gap: calc(var(--standard-gap) * 2);
+    --standard-radius: 2px;
+    font-family: "Garamontio Sans Regular", sans-serif;
+}
+
+body {
+    max-width: var(--max-page-width);
+    margin-inline: calc(calc(100dvw - var(--max-page-width)) / 2);
+    margin-top: var(--large-gap);
+    border: 3px solid black;
+    padding: var(--large-gap);
+    border-radius: var(--standard-radius);
+    min-height: calc(100dvh - calc(var(--large-gap) * 2));
+}
+
+h1 {
+    font-family: "Raleway Variable";
+    font-variation-settings: "wght" 200;
+    text-transform: uppercase;
+}

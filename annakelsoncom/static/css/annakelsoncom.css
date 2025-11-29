@@ -4,12 +4,6 @@
   font-weight: 200 900;
 }
 
-@font-face {
-  font-family: 'Raleway Variable';
-  src: url('/static/fonts/Raleway-VF.woff2') format('woff2-variations');
-  font-weight: 200 900;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;

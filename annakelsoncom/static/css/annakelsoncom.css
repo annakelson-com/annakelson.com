@@ -121,3 +121,10 @@ main > article {
 .block-rich_text p {
     margin-bottom: var(--small-gap);
 }
+
+
+
+.caption {
+    font-style: italic;
+    margin-top: -.5rem;
+}

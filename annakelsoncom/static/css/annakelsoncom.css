@@ -29,6 +29,9 @@ body {
     padding: var(--large-gap);
     border-radius: var(--standard-radius);
     min-height: calc(100dvh - calc(var(--large-gap) * 2));
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-gap)
 }
 
 header {
@@ -48,6 +51,13 @@ h1 {
     font-variation-settings: "wght" 200;
     text-transform: uppercase;
     font-size: 2rem;
+}
+
+h2 {
+    font-family: "Raleway Variable", sans-serif;
+    font-variation-settings: "wght" 250;
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -70,4 +80,15 @@ nav ul li a:hover {
     font-variation-settings: "wght" 350;
     text-decoration: underline 1px solid black;
     color: black;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-gap);
 }

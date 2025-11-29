@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load wagtailcore_tags %}
 {% load static %}
 
 {% block body_class %}template-homepage{% endblock %}
@@ -8,5 +9,17 @@
 {% endblock extra_css %}
 
 {% block content %}
-
+<main class="two-column">
+    <article>
+        <h2>Recent Work</h2>
+    </article>
+    <div class="sidebar">
+        {% for block in page.sidebar %}
+            <article>
+                {% include_block block %}
+            </article>
+            <hr>
+        {% endfor %}
+    </div>
+</main>
 {% endblock content %}

@@ -46,6 +46,7 @@ header img {
     grid-column: span 2;
 }
 
+.visual-h1,
 h1 {
     font-family: "Raleway Variable", sans-serif;
     font-variation-settings: "wght" 200;
@@ -53,6 +54,7 @@ h1 {
     font-size: 2rem;
 }
 
+.visual-h2,
 h2 {
     font-family: "Raleway Variable", sans-serif;
     font-variation-settings: "wght" 250;

@@ -4,6 +4,12 @@
   font-weight: 200 900;
 }
 
+@font-face {
+  font-family: 'Garamontio Sans Variable Italics';
+  src: url('/static/fonts/garamontio_sans_it.woff2') format('woff2-variations');
+  font-weight: 200 900;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

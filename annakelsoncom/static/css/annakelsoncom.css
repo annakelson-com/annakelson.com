@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Garamontio Sans Regular';
-  src: url('/static/fonts/GaramontioSans-Regular.woff2') format('woff2');
+  font-family: 'Garamontio Sans Variable';
+  src: url('/static/fonts/garamontio_sans.woff2') format('woff2-variations');
   font-weight: 200 900;
 }
 
@@ -19,7 +19,7 @@
     --large-gap: calc(var(--standard-gap) * 2);
     --small-gap: calc(var(--standard-gap) / 2);
     --standard-radius: 2px;
-    font-family: "Garamontio Sans Regular", sans-serif;
+    font-family: "Garamontio Sans Variable", sans-serif;
 }
 
 body {
@@ -49,16 +49,16 @@ header img {
 
 .visual-h1,
 h1 {
-    font-family: "Raleway Variable", sans-serif;
-    font-variation-settings: "wght" 200;
+    font-family: "Garamontio Sans Variable", sans-serif;
+    font-variation-settings: "wght" 150;
     text-transform: uppercase;
     font-size: 2rem;
 }
 
 .visual-h2,
 h2 {
-    font-family: "Raleway Variable", sans-serif;
-    font-variation-settings: "wght" 250;
+    font-family: "Garamontio Sans Variable", sans-serif;
+    font-variation-settings: "wght" 200;
     text-transform: uppercase;
     font-size: 1.5rem;
 }
@@ -72,9 +72,9 @@ nav ul {
 
 nav ul li a {
     text-transform: uppercase;
-    font-family: "Raleway Variable", sans-serif;
+    font-family: "Garamontio Sans Variable", sans-serif;
     font-size: 2rem;
-    font-variation-settings: "wght" 200;
+    font-variation-settings: "wght" 150;
     text-decoration: none;
     color: black;
 }

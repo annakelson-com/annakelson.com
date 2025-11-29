@@ -116,9 +116,23 @@ main > article {
     margin-bottom: var(--small-gap);
 }
 
-
-
 .caption {
     font-style: italic;
     margin-top: -.5rem;
+}
+
+table {
+    width: fit-content;
+    border-spacing: 1px;
+    background-color: black;
+}
+
+th {
+    font-variation-settings: "wght" 700;
+}
+
+th,
+td {
+    padding-inline: var(--small-gap);
+    background-color: white;
 }

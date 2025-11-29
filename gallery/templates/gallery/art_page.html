@@ -8,6 +8,20 @@
             {% image page.image max-500x500 %}
             <span class="caption">{{ page.medium }}, {{ page.dimensions }}</span>
             {% include_block page.description %}
+            {% if page.prints_available %}
+                <h2>Prints</h2>
+                This work is available as a print in the following sizes:
+                <table>
+                    <th>Print Size</th>
+                    <th>Price</th>
+                    {% for price_tier in page.print_prices %}
+                        <tr>
+                            <td>{{ price_tier.value.dimensions }}</td>
+                            <td>${{ price_tier.value.price|floatformat:2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
         </article>
     </main>
 {% endblock %}

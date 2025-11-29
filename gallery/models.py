@@ -30,7 +30,7 @@ class ArtPage(Page):
             (
                 'price_tier', StructBlock([
                 ('dimensions', CharBlock()),
-                ('prices', FloatBlock()),
+                ('price', FloatBlock()),
             ])
             )
         ],

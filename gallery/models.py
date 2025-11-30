@@ -46,3 +46,5 @@ class ArtPage(Page):
         FieldPanel('prints_available'),
         FieldPanel('print_prices'),
     ]
+
+    is_art_page = True  # marker for use in templates

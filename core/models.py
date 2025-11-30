@@ -5,6 +5,8 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.fields import StreamField
 from wagtail.models import Page
 
+from gallery.blocks import GalleryBlock
+
 
 # Create your models here.
 
@@ -14,6 +16,7 @@ class StandardPage(Page):
         [
             ('rich_text', RichTextBlock()),
             ('embed', EmbedBlock()),
+            ('gallery', GalleryBlock()),
         ],
         null=True,
     )

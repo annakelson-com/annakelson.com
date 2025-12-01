@@ -28,6 +28,7 @@ body {
     margin-block: var(--large-gap);
     border: 3px solid black;
     padding: var(--large-gap);
+    padding-bottom: var(--standard-gap);
     border-radius: var(--standard-radius);
     min-height: calc(100dvh - calc(var(--large-gap) * 2));
     display: flex;
@@ -212,6 +213,19 @@ td {
     .art-thumbnail {
         justify-self: center;
     }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--large-gap);
+    margin-top: var(--large-gap);
+}
+
+footer span {
+    flex-grow: 1;
+    text-align: center;
 }
 
 @media screen and (max-width: 82rem) {

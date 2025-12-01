@@ -51,6 +51,11 @@
             {% image settings.site_settings.SiteSettings.header_image fill-1300x400 %}
         </header>
         {% block content %}{% endblock %}
+        <footer>
+            <span>© {% now 'Y' %} Anna Kelson</span>
+            <span>Powered by <a href="https://wagtail.org">Wagtail</a></span>
+            <span><a href="/admin">Administrator Login</a></span>
+        </footer>
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/annakelsoncom.js' %}"></script>
 

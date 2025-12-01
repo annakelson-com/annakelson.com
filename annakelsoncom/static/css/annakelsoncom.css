@@ -191,8 +191,6 @@ td {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--standard-gap);
-    /*container-type: inline-size;*/
-    /*container-name: gallery-area;*/
 }
 
 .gallery-container {
@@ -203,7 +201,6 @@ td {
 @container gallery-container (width < 50rem) {
     .gallery-area {
         grid-template-columns: 1fr 1fr;
-        /*background-color: #ea1b10;*/
     }
 }
 

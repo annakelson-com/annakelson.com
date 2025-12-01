@@ -1,13 +1,16 @@
 {% load wagtailimages_tags %}
-<article class="gallery-area">
-    {% for page in art_pages %}
-        {% if page.specific.is_art_page %}
-            <a href="{{ page.url }}">
-                <div class="art-thumbnail">
-                    {% image page.specific.image fill-300x300 %}
+<div class="gallery-container">
+    <article class="gallery-area">
+        {% for page in art_pages %}
+            {% if page.specific.is_art_page %}
+                <a href="{{ page.url }}" class="art-thumbnail">
+                    {% image page.specific.image fill-400x400 %}
                     <span class="gallery-caption">"{{ page.specific.title}}", {{ page.specific.dimensions }}, {{ page.specific.medium }}</span>
-                </div>
-            </a>
-        {% endif %}
-    {% endfor %}
-</article>
+                    {% if page.specific.prints_available %}
+                        <span class="prints-available">Prints Available!</span>
+                    {% endif %}
+                </a>
+            {% endif %}
+        {% endfor %}
+    </article>
+</div>

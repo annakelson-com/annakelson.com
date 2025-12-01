@@ -94,6 +94,7 @@ main > article {
 .two-column {
     display: grid;
     grid-template-columns: 1fr 20rem;
+    gap: var(--standard-gap)
 }
 
 .sidebar {
@@ -104,10 +105,14 @@ main > article {
 
 .richtext-image.right {
     float: right;
+    max-width: 60dvw;
+    height: auto;
 }
 
 .richtext-image.left {
     float: left;
+    max-width: 60dvw;
+    height: auto;
 }
 
 .richtext-image.full-width {
@@ -158,6 +163,87 @@ td {
     transition: background-color 0.25s, transform 0.1s;
 }
 
+.art-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.art-thumbnail .prints-available {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 2.5rem;
+    position: absolute;
+    top: var(--standard-gap);
+    right: var(--standard-gap);
+    padding-top: 1rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    box-shadow: 2px 2px 6px #737373;
+}
+
 .gallery-caption {
     font-family: "Garamontio Sans Variable Italics", sans-serif;
+}
+
+.gallery-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--standard-gap);
+    /*container-type: inline-size;*/
+    /*container-name: gallery-area;*/
+}
+
+.gallery-container {
+    container-type: inline-size;
+    container-name: gallery-container;
+}
+
+@container gallery-container (width < 50rem) {
+    .gallery-area {
+        grid-template-columns: 1fr 1fr;
+        /*background-color: #ea1b10;*/
+    }
+}
+
+@container gallery-container (width < 30rem) {
+    .gallery-area {
+        grid-template-columns: 1fr;
+    }
+
+    .art-thumbnail {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 82rem) {
+    body {
+        margin-inline: var(--small-gap);
+    }
+}
+
+@media screen and (max-width: 65rem) {
+    body {
+        padding: var(--standard-gap);
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        grid-row: 2;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 38rem) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
 }

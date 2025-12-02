@@ -10,7 +10,9 @@ from wagtail.contrib.settings.registry import register_setting
 class SiteSettings(BaseGenericSetting):
     title = models.CharField(max_length=255)
     header_image = models.ForeignKey(Image, null=True, blank=True, on_delete=models.SET_NULL)
+    watermark_text = models.TextField(null=True, blank=True, help_text="Printed onto images when a watermark is necessary.")
     panels = [
         FieldPanel('title'),
         FieldPanel('header_image'),
+        FieldPanel('watermark_text'),
     ]

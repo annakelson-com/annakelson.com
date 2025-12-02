@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
 
 {% block content %}
     <main>
         <article>
             <h1>{{ page.title }}</h1>
-            {% image page.image max-500x500 %}
+            {% image page.image original watermark as fullsize %}
+            {% image page.image max-500x500 fullsize=fullsize.url id="image" %}
             <span class="caption">{{ page.medium }}, {{ page.dimensions }}</span>
             {% include_block page.description %}
             {% if page.prints_available %}
@@ -26,3 +28,21 @@
     </main>
 {% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/viewer.min.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/viewer.min.js' %}"></script>
+    <script type="text/javascript">
+        new Viewer(
+            document.getElementById('image'),
+            {
+                'toolbar': false,
+                'navbar': false,
+                'url': 'fullsize',
+                'title': false
+            }
+        )
+    </script>
+{% endblock %}

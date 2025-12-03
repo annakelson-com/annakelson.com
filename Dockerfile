@@ -1,5 +1,5 @@
 # Use an official Python runtime based on Debian 12 "bookworm" as a parent image.
-FROM python:3.12-slim-bookworm
+FROM --platform=linux/arm64/v8 arm64v8/python:3.12.12-bookworm
 
 # Add user that will be used in the container.
 RUN useradd wagtail

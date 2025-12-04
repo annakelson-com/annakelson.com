@@ -13,7 +13,11 @@ MARGIN = 10
 
 
 def pillow_watermark(image):
-    watermark_text = SiteSettings.load().watermark_text.replace('\r', '')
+    watermark_text = SiteSettings.load().watermark_text
+    if watermark_text:
+        watermark_text = watermark_text.replace('\r', '')
+    else:
+        watermark_text = 'Anna Kelson Fine Art\nWatermark Text Unset'
     pil_image = image.image
     draw = ImageDraw.Draw(pil_image)
     font = ImageFont.load_default(size=40)  # .truetype(settings.STATIC_ROOT + "fontsarial.ttf", 16)

@@ -5,7 +5,7 @@
             {% if page.specific.is_art_page %}
                 <a href="{{ page.url }}" class="art-thumbnail">
                     {% image page.specific.image fill-400x400 %}
-                    <span class="gallery-caption">"{{ page.specific.title}}", {{ page.specific.dimensions }}, {{ page.specific.medium }}</span>
+                    <span class="gallery-caption">"{{ page.specific.title}}", {{ page.specific.dimensions }}, {{ page.specific.medium }}{% if page.specific.original_price and not page.specific.original_sold %} - {{ page.specific.original_price }}{% elif page.specific.original_sold %} - Sold{% endif %}</span>
                     {% if page.specific.prints_available %}
                         <span class="prints-available">Prints Available!</span>
                     {% endif %}

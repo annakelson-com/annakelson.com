@@ -8,7 +8,7 @@
             <h1>{{ page.title }}</h1>
             {% image page.image original watermark as fullsize %}
             {% image page.image max-500x500 fullsize=fullsize.url id="image" %}
-            <span class="caption">{{ page.medium }}, {{ page.dimensions }}</span>
+            <span class="caption">{{ page.medium }}, {{ page.dimensions }}{% if page.specific.original_price and not page.specific.original_sold %} - {{ page.specific.original_price }}{% elif page.specific.original_sold %} - Sold{% endif %}</span>
             {% include_block page.description %}
             {% if page.prints_available %}
                 <h2>Prints</h2>

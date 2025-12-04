@@ -37,6 +37,8 @@ class ArtPage(Page):
         null=True,
         blank=True,
     )
+    original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    original_sold = models.BooleanField(default=False)
 
     content_panels = Page.content_panels + [
         FieldPanel('image'),
@@ -45,6 +47,8 @@ class ArtPage(Page):
         FieldPanel('dimensions'),
         FieldPanel('prints_available'),
         FieldPanel('print_prices'),
+        FieldPanel('original_price'),
+        FieldPanel('original_sold'),
     ]
 
     is_art_page = True  # marker for use in templates
